@@ -37,9 +37,8 @@ increment = () =>{
   render() {
     return (
       <div>
-        <h2>Welcome to your Todo App!</h2>
+        <h2>Welcome to Today!</h2>
         <TodoList></TodoList>
-        <div></div>
       </div>
     );
   }

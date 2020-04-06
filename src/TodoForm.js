@@ -29,9 +29,6 @@ class TodoForm extends React.Component
     // this.state = [...this.state, { "task": document.getElementById("task").value, id: Date(), completed: false }]
 
     this.list = [...this.list, document.getElementById("task").value]
-    // console.log(this.list)
-    console.log(this.state)
-    console.log(this.list)
   }
 
   handleChange = (event) =>
@@ -70,6 +67,7 @@ class TodoForm extends React.Component
             id='task'
             value={this.state.text} />
           <button onClick={this.handleSubmit}  >Submit</button>
+          <button  >Clear Completed</button>
           <br/>
           <br/>
 
