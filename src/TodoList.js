@@ -23,8 +23,8 @@ export default class TodoList extends React.Component
   {
     return (
       <div>
-        {this.state.todos.map(todo => (
-          <div key={todo.id}>{todo.text}</div>
+        {this.props.tasks.map(todo => (
+          <div id={todo.id}>{todo.task}</div>
         ))}
         <br />
         <br />
