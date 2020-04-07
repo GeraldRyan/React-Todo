@@ -1,23 +1,8 @@
-This is just a text file to help me figure things out. 
+What I learned from today: 
 
-I need to make wins that get me a sense of understanding of react and this current module. I so far have little understanding let alone the ability to architect at a high level, which is what I need. So I have multi-level troubles or problems. The problems are not yet super defined so they are more pernicious. Let's not get overwhelmed yet but note that I will have a good handle on all of this in not too long of a time, and then I can code and architect a facebook website or whatsapp. I will understand why and how and also the components necessary and their state management. 
+Where I"m still a little weak, to be mindful of for sprint:
+- Filter and how it's used
+- this
+- I still get the console warning A component is changing an uncontrolled input of type text to be controlled...
 
-Why does react have it's own components debugger? Is it so complicated that normal debugging won't work for it? So I have to be aware of this too. 
-
-The React Components debugger shows props, state and source. It shows the level of components. 
-
-You can run react component debugger on external websites like facebook and maybe others. 
-
-pass event handlers like onClick to a component: by passing them as props. 
-
-To get access to the parent component in the handler, you also need to bind the function to the component instance. 
-
-There are several ways to bind. 
-
-Tyipcally in react you only need to bind methods that you pass to other components. So we passed a method to a component so we need to bind it to give it access. 
-
-I hardly even know what it means to call a function. This is a forest of confusing elements. Stop feeling so confused. Feel on track and that you're making lots of gains. Have some morale for Christsakes. 
-
-Persistant this value. There are only a number of core computer concepts and they include things like memory, tree, network, data structure, buffer, callstack. function call, token, compilation, authentication, hash, reference or pointer, addressing, access and persistence is also one of them. These are just the basic computer concepts at play in different variety. 
-
-This is coming into play. Bind is critical for this. 
+I think we narrowed things down, solidified knowledge, confirmed some principles and left somewhat of a trail for sprint. That should be done more conscientiously in the future for ease of Fridays. 
