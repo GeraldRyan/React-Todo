@@ -15,9 +15,8 @@ class App extends React.Component
   constructor()
   {
     super()
-
     this.state = {
-      tasks:tasks
+      tasks
     }
     // you will need a place to store your state in this component.
     // design `App` to be the parent component of your application.
@@ -31,10 +30,29 @@ class App extends React.Component
     })
   }
 
-  increment = () =>
+  decrement = () =>
   {
     this.setState({
       count: this.state.count - 1
+    })
+  }
+
+
+  toggleCompleted = itemID =>{
+    console.log(itemID)
+    // map over array
+    // when we find item we clicked, toggle completed field else return item untouched
+    this.setState({
+      tasks: this.state.tasks.map(item =>{
+        if (itemID === item.id){
+          return {
+            ...item, 
+            completed: !item.completed
+          }
+        }
+        return item;
+
+      })
     })
   }
 
@@ -49,9 +67,9 @@ class App extends React.Component
     this.setState({
       tasks: [...this.state.tasks, newTask]
     })
-    console.log("t is for task:", t)  //pass
-    console.log("tasks:", this.state.tasks)  //pass
-    console.log("newTask:", newTask) //pass
+    // console.log("t is for task:", t)  //pass
+    // console.log("tasks:", this.state.tasks)  //pass
+    // console.log("newTask:", newTask) //pass
   }
 
 
@@ -59,8 +77,8 @@ class App extends React.Component
   {
     return (
       <div>
-        <TodoForm addTask={this.addTask}></TodoForm>
-        <TodoList tasks={this.state.tasks} ></TodoList>
+        <TodoForm addTask={this.addTask} ></TodoForm>
+        <TodoList tasks={this.state.tasks} toggleCompleted={this.toggleCompleted} ></TodoList>
       </div>
     );
   }
