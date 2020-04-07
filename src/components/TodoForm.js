@@ -7,24 +7,7 @@ class TodoForm extends React.Component
   constructor(props)
   {
     super(props);
-    this.state ={}
-      // this.state = {
-      //   task: "",f
-      //   id: "",
-      //   completed: false
-      // }
-      // this.list = []
-  }
-
-  state = {
-    text: ""
-  }
-
-  handleClick = (event) =>
-  {
-
-    // this.state = [...this.state, { "task": document.getElementById("task").value, id: Date(), completed: false }]
-    this.list = [...this.list, document.getElementById("task").value]
+    this.state ={text:""}
   }
 
   handleChange = (event) =>
@@ -32,9 +15,7 @@ class TodoForm extends React.Component
     this.setState({
       [event.target.name]: event.target.value
     })
-
   }
-
 
   handleSubmit = (e) =>
   {
@@ -56,7 +37,6 @@ class TodoForm extends React.Component
             type="text"
             onChange={this.handleChange}
             placeholder="enter your task"
-            id='task'
             value={this.state.text} />
           <button onClick={this.handleSubmit}  >Add Todo</button>
           <button onClick={this.props.clearCompleted}>Clear Completed</button>
@@ -68,8 +48,6 @@ class TodoForm extends React.Component
       </div>
     )
   }
-
-
 }
 
 export default TodoForm

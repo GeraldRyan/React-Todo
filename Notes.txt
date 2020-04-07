@@ -6,3 +6,12 @@ Where I"m still a little weak, to be mindful of for sprint:
 - I still get the console warning A component is changing an uncontrolled input of type text to be controlled...
 
 I think we narrowed things down, solidified knowledge, confirmed some principles and left somewhat of a trail for sprint. That should be done more conscientiously in the future for ease of Fridays. 
+
+
+Also this may be a pattern worth remembering- remember architecture! It helps for design as well as sprints: 
+just as e.target.name often pairs with e.target.value
+
+Maybe there is an {item}Form for the form and field inputs, an {item}List for the list of them and then the {item} for the actual individual. And the App that hosts them all and holds state/court. And form can branch off out from the two and be siblings of list, which is parent of individual. Just start noting architecture. That may help me get farther. You don't want to have to think of design patterns (that could have been learned) because coding techniques will not get you there. Syntax won't get you there. You need structure. Think architecture. That's where the money and glory is at. That is what it means to be a man. Otherwise you have to brute force invent it, and you may be clever but no. They are teaching us what's tried and true, so be mindful of the structural patterns. That is also maybe not seen as much on Stack Overflow. This has to be my new home- and it converts all the syntax and other stuff into mere details, as you have the canopy. Get the canopy. Get it and keep it and treasure it. And stay sane and pass interviews with confidence based on competence. Not nitty gritty weeds. It's not all about the weeds. It's about the pattern and scope and scale and structure and so forth. It's about the pattern. Don't just look to the ground all the time. Look to the skies. Look up more. Don't be so humble. Be more confident. It is how you will become a leader. So think App, Form, List, itemInList. And observe how passing props and functions through props will start to look familiar.  
+
+Each form also needs a state of the form field. I may get to do multiple fields in the future, but for now let's not overexpand precociously. But each individual form needs a state of the form and a handleChange function based on onChange that updates state with the letter typed. That's getting into the weeds a little too much but it is worth noting. 
+
