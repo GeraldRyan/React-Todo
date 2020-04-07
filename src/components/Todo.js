@@ -5,8 +5,10 @@ export default function Todo(props)
 {
   return (
     <div
-    className={`task${props.task.completed ? ' completed' : ''}`}
+    id={props.id}
+    className={`task${props.completed ? ' completed' : ''}`}
+    onClick={() => props.toggleCompleted(props.key)}
     >
-      <p id={props.id}>{props.task}</p>
+      <p >{props.task}</p>
     </div>
 )}

@@ -27,7 +27,7 @@ export default class TodoList extends React.Component
       <div>
         <h2>:: My Tasks ::</h2>
         {this.props.tasks.map(todo => (
-          <Todo id={todo.id} task={todo.task} toggleCompleted={this.props.toggleCompleted}/>
+          <Todo key={todo.id} completed={todo.completed} task={todo.task} toggleCompleted={this.props.toggleCompleted}/>
         ))}
       </div>
     )
