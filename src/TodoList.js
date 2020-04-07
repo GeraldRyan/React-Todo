@@ -1,5 +1,6 @@
 import React from 'react';
 import TodoForm from './TodoForm'
+import Todo from './Todo'
 
 
 export default class TodoList extends React.Component
@@ -9,7 +10,8 @@ export default class TodoList extends React.Component
   }
 
 
-  addTodo = todo => {
+  addTodo = todo =>
+  {
     this.setState({
       todos: [todo, ...this.state.todos]
     })
@@ -19,16 +21,15 @@ export default class TodoList extends React.Component
 
   render()
   {
-    return(
-    <div>
-      <TodoForm onSubmit={this.addTodo}></TodoForm>
-      {this.state.todos.map(todo =>(
-        <div key={todo.id}>{todo.text}</div>
-      ))}
-      {/* {JSON.stringify(this.state.todos, null, 4)} */}
-      <br/>
-      <br/>
-    </div>
+    return (
+      <div>
+        {this.state.todos.map(todo => (
+          <div key={todo.id}>{todo.text}</div>
+        ))}
+        <br />
+        <br />
+        <Todo tasks={this.props.tasks}></Todo>
+      </div>
     )
   }
 

@@ -22,12 +22,8 @@ class TodoForm extends React.Component
 
   handleClick = (event) =>
   {
-    // console.log(event.target.value)
-    // console.log(document.getElementById("task").value)
-
 
     // this.state = [...this.state, { "task": document.getElementById("task").value, id: Date(), completed: false }]
-
     this.list = [...this.list, document.getElementById("task").value]
   }
 
@@ -43,11 +39,7 @@ class TodoForm extends React.Component
   handleSubmit = (e) =>
   {
     e.preventDefault()
-    this.props.onSubmit({
-      text: this.state.text,
-      id: Date.now(),
-      completed: false
-    })
+    this.props.addTask(e, this.state.text)
     this.setState({
       text: ""
     })  
@@ -58,7 +50,7 @@ class TodoForm extends React.Component
     return (
 
       <div>
-        <h1>I'm rendering something: </h1>
+        <h1>Welcome to Today </h1>
         <form onSubmit={this.handleSubmit} action="">
           <input name="text"
             type="text"
@@ -66,7 +58,7 @@ class TodoForm extends React.Component
             placeholder="enter your task"
             id='task'
             value={this.state.text} />
-          <button onClick={this.handleSubmit}  >Submit</button>
+          <button onClick={this.handleSubmit}  >Add Todo</button>
           <button  >Clear Completed</button>
           <br/>
           <br/>
